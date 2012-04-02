@@ -1,0 +1,195 @@
+header > h1 {
+    font-size: 48px;
+    color: #718281;
+    text-shadow: 1px 1px #AA5549, 2px 2px #AA5549, 3px 3px #718281;
+    width: 940px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#content {
+    margin-top: 10px;
+    background-color: #393229;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+#drop-area {
+    background-color: #BBB;
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: inset 1px 1px 5px #000;
+}
+
+#drop-area > p {
+    line-height: 400px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    text-shadow: 2px 2px 2px #888;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type=file] {
+    width: 75%;
+    margin: 5px auto;
+}
+
+.outer-circle {
+    background-color: #111;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin: 50px;
+    box-shadow: 4px 4px 6px #333;
+    float: left;
+
+    /* Spinning Animations */
+    /* webkit chrome, safari, mobile */
+    -webkit-animation-name: spin; 
+    -webkit-animation-duration: 20s; /* 3 seconds */
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear;
+
+    /* mozilla ff */
+    -moz-animation-name: spin; 
+    -moz-animation-duration: 20s; /* 3 seconds */
+    -moz-animation-iteration-count: infinite; 
+    -moz-animation-timing-function: linear;
+
+    /* microsoft ie */
+    -ms-animation-name: spin; 
+    -ms-animation-duration: 20s; /* 3 seconds */
+    -ms-animation-iteration-count: infinite; 
+    -ms-animation-timing-function: linear;
+}
+
+.middle-circle {
+    background-color: #F00;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin-top: 25px;
+    margin-left: 75px;
+    float: left;
+}
+
+.inner-circle {
+    background-color: #BBB;
+    width: 50px;
+    height: 50px;
+    border-radius: 45px;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    box-shadow: inset 2px 2px 5px #333;
+    border: 20px solid #111;
+}
+
+.vinyl-text {
+    margin-top: 30px;
+    width: 300px;
+    text-align: center;
+    font-size: 40px;
+    float: left;
+    font-size: 30px;
+    color: #555;
+    text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+
+/* Arctext.js styles */
+.arc-wrapper{
+    position: relative;
+    margin: 0px auto;
+    font-family: 'Montserrat', serif;
+    text-transform: uppercase;
+    width: 500px;
+    height: 360px;
+}
+.arc-wrapper:before{
+    content: '';
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background: #F5E9BC url(../images/noise.png) repeat top left;
+    border: 10px solid #452716;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.3);
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -180px;
+}
+.arc-wrapper:after{
+    content: 'A';
+    color: #F5E9BC;
+    line-height: 210px;
+    width: 240px;
+    height: 240px;
+    background: #452716 url(../images/noise.png) repeat top left;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -120px;
+    font-family: 'Sail', serif;
+    text-transform: none;
+    font-size: 138px;
+    text-shadow: 0px 0px 1px #F5E9BC;
+    text-indent: -25px;
+}
+.arc-wrapper h3{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 28px;
+    margin-top: 16px;
+    color: #D26A44;
+    letter-spacing: -4px;
+    text-shadow: 1px 1px 1px #954c04;
+}
+.arc-wrapper h4{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    font-size: 39px;
+    bottom: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    font-family: 'Concert One', serif;
+}
+.arc-wrapper h4 span{
+    background: #D26A44;
+    padding: 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 -3px 0px -3px;
+}
+.arc-wrapper h4 span.empty{
+    background: transparent;
+    width: 4px;
+}

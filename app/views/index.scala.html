@@ -1,7 +1,27 @@
-@(message: String)
+@()
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
+@main("GenreBot") {
+    <div id="content">
+        <form action="@routes.Application.genreParse" method="post" enctype="multipart/form-data">
+            <h2>Please choose the audio file you'd like to have analyzed</h2>
+            <div id="drop-area">
+                <div class="outer-circle">
+                    <div class="vinyl-text inset-text">drag a file here</div>
+                    <div class="middle-circle">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+                <div class="outer-circle">
+                    <div class="vinyl-text inset-text">drag a file here</div>
+                    <div class="middle-circle">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <span>Or...</span>
+            <input type="file" name="music-file" accept="audio/*" value="">
+            <button class="btn">Choose a File from your Computer</button>
+            <input class="btn primary" type="submit" value="GenreBot, Go!">
+        </form>
+    </div>
 }
