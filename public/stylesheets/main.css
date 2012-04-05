@@ -1,54 +1,173 @@
+html, body {
+    height: 100%;
+    background-color: #F3F3F1;
+}
+
+a, a:hover, a:focus {
+    color: #005580;
+    text-decoration: none;
+}
+
+header {
+    padding: 15px 0px 25px 0px;
+    background-color: #AEA396;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    box-shadow: 0px 2px 10px #999;
+}
+
 header > h1 {
-    font-size: 48px;
+    margin-left: 25px;
+    font-size: 64px;
     color: #718281;
-    text-shadow: 1px 1px #AA5549, 2px 2px #AA5549, 3px 3px #718281;
-    width: 940px;
-    margin: 10px auto;
+    text-shadow: 1px 1px #000, 2px 2px #AA5549, 3px 3px #AA5549;
+}
+
+footer {
+    background-color: #AEA396;
+    height: 77px;
+    border-top: 2px solid #333;
+    box-shadow: 0px -2px 10px #999;
+}
+
+footer > p {
+    width: 100%;
     text-align: center;
+    color: #555;
+    margin-top: 35px;
+}
+
+button.btn {
+    width: 221px;
+    margin: 10px auto 30px 239px;
 }
 
 #content {
-    margin-top: 10px;
-    background-color: #393229;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px #000;
-}
-
-#drop-area {
     background-color: #BBB;
-    width: 800px;
-    height: 400px;
-    margin: 10px auto;
+    width: 700px;
+    margin: 10px auto 100px auto;
     border-radius: 15px;
     box-shadow: inset 1px 1px 5px #000;
 }
 
-#drop-area > p {
-    line-height: 400px;
-    width: 400px;
-    text-align: center;
-    margin: auto;
-    text-shadow: 2px 2px 2px #888;
+#turntable {
+    width: 500px;
+    background-color: #EEE;
+    margin: 20px auto 0px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px #333, 2px 2px #333, 3px 3px #333;
+}
+
+#sidebar {
+    width: 170px;
+    height: 300px;
+    float:right;
+}
+
+#dials {
+    background-color: #666;
+    width: 100px;
+    height: 200px;
+    margin-left: 70px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 5px #000;
+}
+
+#volume {
+    background-color: #777;
+    border: solid 1px #555;
+    border-radius: 10px;
+    position: relative;
+    left: 45px;
+    top: 25px;
+    width: 10px;
+    height: 150px;
+}
+
+#volume-toggle {
+    background-color: #333;
+    border-radius: 4px;
+    border: solid 2px #111;
+    width: 30px;
+    height: 15px;
+    position: relative;
+    top: 60px;
+    left: -10px;
+}
+
+#rocker {
+    background-color: #444;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+#needle-arm-top {
+    position: relative;
+    left: 21px;
+    top: 15px;
+    background-color: #444;
+    width: 17px;
+    height: 250px;
+}
+
+#needle-arm-bottom {
+    background-color: #777;
+    border-radius: 4px;
+    position: relative;
+    top: 233px;
+    width: 25px;
+    height: 50px;
+
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 0 0;
+}
+
+#go-btn {
+    width: 180px;
+    margin: 10px auto;
+}
+
+#go {
+    float: left;
+    width: 150px;
+    height: 60px;
+    margin: 0px;
+    background-color: green;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: -1px 1px 5px #777;
 }
 
 h2 {
     text-align: center;
+    padding-top: 15px;
 }
 
 input[type=file] {
     width: 75%;
     margin: 5px auto;
+    display: none;
 }
 
-.outer-circle {
-    background-color: #111;
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -77px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.record-outer {
+    background: url("../images/vinyl.png");
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    margin: 50px;
+    margin-left: 15px;
     box-shadow: 4px 4px 6px #333;
-    float: left;
 
     /* Spinning Animations */
     /* webkit chrome, safari, mobile */
@@ -70,37 +189,48 @@ input[type=file] {
     -ms-animation-timing-function: linear;
 }
 
-.middle-circle {
-    background-color: #F00;
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-    margin-top: 25px;
-    margin-left: 75px;
+.record-middle {
+    background-color: #718281;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-left: 80px;
+    margin-top: 80px;
     float: left;
 }
 
-.inner-circle {
+.record-inner {
     background-color: #BBB;
-    width: 50px;
-    height: 50px;
-    border-radius: 45px;
-    margin-top: 30px;
-    margin-left: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    margin-left: 55px;
+    margin-top: 55px;
     float: left;
     box-shadow: inset 2px 2px 5px #333;
-    border: 20px solid #111;
+    border: 10px solid #111;
 }
 
-.vinyl-text {
-    margin-top: 30px;
-    width: 300px;
-    text-align: center;
+.sunken-text {
+    margin-top: 20px;
+    margin-left: 50px;
     font-size: 40px;
     float: left;
-    font-size: 30px;
-    color: #555;
+    color: #040;
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+.arrow-right {
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid green;
+}
+
+.push {
+    height: 77px;
 }
 
 @-webkit-keyframes spin {
@@ -116,80 +246,4 @@ input[type=file] {
 @-ms-keyframes spin {
   from { -ms-transform: rotate(0deg); }
   to { -ms-transform: rotate(360deg); }
-}
-
-/* Arctext.js styles */
-.arc-wrapper{
-    position: relative;
-    margin: 0px auto;
-    font-family: 'Montserrat', serif;
-    text-transform: uppercase;
-    width: 500px;
-    height: 360px;
-}
-.arc-wrapper:before{
-    content: '';
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    background: #F5E9BC url(../images/noise.png) repeat top left;
-    border: 10px solid #452716;
-    border-radius: 50%;
-    box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.3);
-    top: 50%;
-    left: 50%;
-    margin: -180px 0 0 -180px;
-}
-.arc-wrapper:after{
-    content: 'A';
-    color: #F5E9BC;
-    line-height: 210px;
-    width: 240px;
-    height: 240px;
-    background: #452716 url(../images/noise.png) repeat top left;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -120px 0 0 -120px;
-    font-family: 'Sail', serif;
-    text-transform: none;
-    font-size: 138px;
-    text-shadow: 0px 0px 1px #F5E9BC;
-    text-indent: -25px;
-}
-.arc-wrapper h3{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    font-size: 28px;
-    margin-top: 16px;
-    color: #D26A44;
-    letter-spacing: -4px;
-    text-shadow: 1px 1px 1px #954c04;
-}
-.arc-wrapper h4{
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    font-size: 39px;
-    bottom: 10px;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    font-family: 'Concert One', serif;
-}
-.arc-wrapper h4 span{
-    background: #D26A44;
-    padding: 3px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    margin: 0 -3px 0px -3px;
-}
-.arc-wrapper h4 span.empty{
-    background: transparent;
-    width: 4px;
 }

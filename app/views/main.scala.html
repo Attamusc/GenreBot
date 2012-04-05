@@ -9,11 +9,14 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
     </head>
     <body>
-        <header>
-            <h1>GenreBot</h1>
-        </header>
-        <div class="container">
-            @content
+        <div class="wrapper">
+            <header>
+                <h1>GenreBot</h1>
+            </header>
+            <div class="container">
+                @content
+                <div class="push"></div>
+            </div>
         </div>
         <footer>
             <p>Created using <a href="http://www.playframework.org/" title="Play!">Play!</a>, <a href="http://twitter.github.com/bootstrap/" title="Bootstrap">Bootstrap</a>, and lots of Daft Punk.</p>   

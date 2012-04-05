@@ -3,25 +3,33 @@
 @main("GenreBot") {
     <div id="content">
         <form action="@routes.Application.genreParse" method="post" enctype="multipart/form-data">
-            <h2>Please choose the audio file you'd like to have analyzed</h2>
-            <div id="drop-area">
-                <div class="outer-circle">
-                    <div class="vinyl-text inset-text">drag a file here</div>
-                    <div class="middle-circle">
-                        <div class="inner-circle"></div>
+            <h2>Drag a file onto the turntable</h2>
+            <div id="turntable">
+                <div id="sidebar">
+                    <div id="rocker">
+                        <div id="needle-arm-top">
+                            <div id="needle-arm-bottom"></div>
+                        </div>
+                    </div>
+                    <div id="dials">
+                        <div id="volume">
+                            <div id="volume-toggle"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="outer-circle">
-                    <div class="vinyl-text inset-text">drag a file here</div>
-                    <div class="middle-circle">
-                        <div class="inner-circle"></div>
+                <div class="record-outer">
+                    <div class="record-middle">
+                        <div class="record-inner"></div>
                     </div>
                 </div>
             </div>
-            <span>Or...</span>
+            <h2>Or...</h2>
             <input type="file" name="music-file" accept="audio/*" value="">
             <button class="btn">Choose a File from your Computer</button>
-            <input class="btn primary" type="submit" value="GenreBot, Go!">
         </form>
+        <div id="go-btn">
+            <div id="go"><span class="sunken-text">Go!</span></div>
+            <div class="arrow-right"></div>
+        </div>
     </div>
 }
