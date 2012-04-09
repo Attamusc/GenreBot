@@ -141,6 +141,7 @@ button.btn {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     box-shadow: -1px 1px 5px #777;
+    cursor: pointer;
 }
 
 h2 {
