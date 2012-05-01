@@ -3,19 +3,16 @@ package controllers
 import play.api._
 import play.api.mvc._
 import play.api.libs.Files
-
-import dispatch._
+import play.api.libs.json
 
 import java.io.File
+
+import dispatch._
 
 object Application extends Controller {
   
   def index = Action {
     Ok(views.html.index())
-  }
-
-  def about = Action {
-    Ok(views.html.about())
   }
 
   def genreParse = Action(parse.multipartFormData) { request =>
@@ -27,6 +24,8 @@ object Application extends Controller {
       // Make a remote request to our tornado server
       val h = new Http
       val resp = h(url("http://localhost:8888/parse?filename=" + file.filename) as_str)
+
+      //val json_test = Json.parse(resp)
 
       Logger.info(resp)
     }
