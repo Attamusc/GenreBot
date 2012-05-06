@@ -238,6 +238,10 @@ input[type=file] {
     height: 77px;
 }
 
+.results {
+    padding: 10px;
+}
+
 @-webkit-keyframes spin {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }

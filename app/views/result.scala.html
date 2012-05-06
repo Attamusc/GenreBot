@@ -1,0 +1,10 @@
+@(rock_percentage: Float, electronic_percentage: Float)
+
+@main("GenreBot") {
+    <div id="content">
+        <div class="results">
+            <span style="font-size:@(rock_percentage*100)px;line-height:@((rock_percentage*100) + 2)px">Rock</span><br>
+            <span style="font-size:@(electronic_percentage*100)px;line-height:@((electronic_percentage*100) + 2)px">Electronic</span>
+        </div>
+    </div>
+}
