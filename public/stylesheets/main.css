@@ -136,6 +136,11 @@ button.btn {
     margin: 10px auto;
 }
 
+#back-btn {
+    width: 180px;
+    margin: 20px auto;
+}
+
 #go {
     float: left;
     width: 150px;
@@ -146,6 +151,22 @@ button.btn {
     border-bottom-left-radius: 6px;
     box-shadow: -1px 1px 5px #777;
     cursor: pointer;
+}
+
+#back {
+    float: right;
+    width: 150px;
+    height: 60px;
+    margin: 0px;
+    background-color: red;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 1px 1px 2px #777;
+    cursor: pointer;
+}
+
+#back a:hover {
+    color: #700;
 }
 
 h2 {
@@ -218,15 +239,23 @@ input[type=file] {
 
 .sunken-text {
     margin-top: 20px;
-    margin-left: 50px;
     font-size: 40px;
     float: left;
-    color: #040;
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 }
 
+.dark-green {
+    margin-left: 50px;
+    color: #040;
+}
+
+.dark-red {
+    margin-left: 25px;
+    color: #700;
+}
+
 .arrow-right {
-    float: left;
+    float: right;
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
@@ -234,12 +263,45 @@ input[type=file] {
     border-left: 30px solid green;
 }
 
+.arrow-left {
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid red;
+}
+
 .push {
     height: 77px;
 }
 
+.result {
+    font-size: 42px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #777;
+    border-bottom: 1px dashed #333;
+    text-shadow: 1px 1px #333, 2px 2px 1px #333;
+}
+
 .results {
     padding: 10px;
+}
+
+#analysis {
+    border-top: 1px dashed #333;
+    padding: 10px;
+}
+
+#analysis h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#analysis p {
+    display: none;
+    font-size: 16px;
 }
 
 @-webkit-keyframes spin {

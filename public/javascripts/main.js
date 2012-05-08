@@ -13,6 +13,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('#analysis h1').on('click', function() {
+      var display = $('#analysis p').css('display');
+      if (display === 'none') {
+        $('#analysis p').fadeIn("normal");
+      }
+      else {
+        $('#analysis p').fadeOut("normal");
+      }
+    });
+
     document.getElementById("turntable").addEventListener("drop", function(e) {
         e.stopPropagation();
         e.preventDefault();

@@ -6,7 +6,6 @@ import play.api.libs.Files
 import play.api.libs.json._
 import java.io.File
 import dispatch._
-import norsys.netica._
 
 object Application extends Controller {
 
@@ -35,6 +34,10 @@ object Application extends Controller {
     }
 
     Ok(views.html.result(rock_percentage, electronic_percentage))
+  }
+
+  def resultTest = Action {
+    Ok(views.html.result(0.5f, 0.5f))
   }
   
 }

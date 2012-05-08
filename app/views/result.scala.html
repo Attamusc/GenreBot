@@ -2,9 +2,18 @@
 
 @main("GenreBot") {
     <div id="content">
+        <h1 class="result">Results</h1>
         <div class="results">
             <span style="font-size:@(rock_percentage*100)px;line-height:@((rock_percentage*100) + 2)px">Rock</span><br>
             <span style="font-size:@(electronic_percentage*100)px;line-height:@((electronic_percentage*100) + 2)px">Electronic</span>
+        </div>
+        <div id="analysis">
+            <h1>What does this mean?</h1>
+            <p>The size of the above text is based on genres that are present within the song. For example, if more of the song resembles Rock, than it will be bigger than other genres that appear.</p>
+        </div>
+        <div id="back-btn">
+            <div class="arrow-left"></div>
+            <div id="back"><a href="/" class="sunken-text dark-red">Back!</a></div>
         </div>
     </div>
 }
